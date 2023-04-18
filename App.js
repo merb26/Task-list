@@ -1,12 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
-import {StatusBar} from 'expo-status-bar';
+import AddTask from './src/components/add-task/AddTask';
+import ListTasks from './src/components/list-tasks/ListTasks';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>¡HELLO WORLD!</Text>
-      <StatusBar style='auto' />
+      <AddTask />
+      <ListTasks />
     </View>
   );
 }
@@ -14,9 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#16A085',
-    color: '#CD6155',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#FFFBDB',
+    paddingTop: 40,
+    paddingHorizontal: 15,
   },
 });
