@@ -11,11 +11,15 @@ export default function App() {
   const handleAddEvent = () => {
     if (valueInputText.length === 0) return;
 
+    const date = new Date();
+    const dateFormat = date.toLocaleDateString();
+
     setTasks([
       ...tasks,
       {
         id: Math.random().toString(),
         value: valueInputText,
+        createdDate: dateFormat,
       },
     ]);
 

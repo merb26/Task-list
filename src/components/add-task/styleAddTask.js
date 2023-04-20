@@ -15,4 +15,8 @@ export const styleAddTask = StyleSheet.create({
     paddingVertical: 10,
     color: '#4F5D75',
   },
+
+  marginBottom20: {
+    marginBottom: 20,
+  },
 });
