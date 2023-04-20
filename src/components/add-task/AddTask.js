@@ -1,5 +1,6 @@
 import {Button, TextInput, View} from 'react-native';
 
+import CustomButton from '../custom-button/CustomButton';
 import {styleAddTask} from './styleAddTask';
 
 const AddTask = ({text, setText, onAddEvent}) => {
@@ -11,7 +12,7 @@ const AddTask = ({text, setText, onAddEvent}) => {
         value={text}
         onChangeText={(text) => setText(text)}
       />
-      <Button title='+' onPress={() => onAddEvent()} />
+      <CustomButton title='+' onPress={onAddEvent} />
     </View>
   );
 };
