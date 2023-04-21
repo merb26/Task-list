@@ -28,7 +28,10 @@ export const ModelDetailTask = ({
           </Text>
         </View>
 
-        <CustomButton title='Salir' onPress={() => setModalVisible(false)} />
+        <CustomButton
+          title='Salir'
+          onPress={() => setModalVisible(!modalVisible)}
+        />
       </View>
     </Modal>
   );

@@ -6,7 +6,6 @@ export const styleTask = StyleSheet.create({
     paddingVertical: 15,
     backgroundColor: '#B9D2B1',
     borderRadius: 5,
-    marginBottom: 5,
   },
 
   text: {

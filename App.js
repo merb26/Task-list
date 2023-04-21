@@ -33,7 +33,7 @@ export default function App() {
         setText={setValueInputText}
         onAddEvent={handleAddEvent}
       />
-      <ListTasks tasks={tasks} />
+      <ListTasks tasks={tasks} setTasks={setTasks} />
     </View>
   );
 }
@@ -44,5 +44,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFBDB',
     paddingTop: 40,
     paddingHorizontal: 15,
+    paddingBottom: 45,
   },
 });
