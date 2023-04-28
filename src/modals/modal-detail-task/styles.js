@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
-export const styleModelDetailTask = StyleSheet.create({
+export const stylesDetail = StyleSheet.create({
   containerDT: {
     flex: 1,
     paddingHorizontal: 15,

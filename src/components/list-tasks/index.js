@@ -1,13 +1,13 @@
-import {FlatList, Text, TouchableOpacity, View} from 'react-native';
-
+import { useState } from 'react';
+import { FlatList, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {ModalDeleteTask} from './modal-delete-task/ModalDeleteTask';
-import ModelDetailTask from './model-detail-task/ModelDetailTask';
-import Task from './task/Task';
-import {styleListTasks} from './styleListTasks';
-import {useState} from 'react';
 
-const ListTasks = ({tasks, setTasks}) => {
+import { ModalDeleteTask } from './modal-delete-task/ModalDeleteTask';
+import ModelDetailTask from './model-detail-task/ModelDetailTask';
+import { styles } from './styles';
+import Task from './task/Task';
+
+const ListTasks = ({ tasks, setTasks }) => {
   const [selectedTask, setSelectedTask] = useState([]);
   const [modalVisibleDetail, setModalVisibleDetail] = useState(false);
   const [modalVisibleDelete, setModalVisibleDelete] = useState(false);
@@ -29,25 +29,23 @@ const ListTasks = ({tasks, setTasks}) => {
     setModalVisibleDelete(!modalVisibleDelete);
   };
 
-  const renderTask = ({item}) => (
-    <View style={styleListTasks.boxTaskRender}>
+  const renderTask = ({ item }) => (
+    <View style={styles.boxTaskRender}>
       <TouchableOpacity
-        style={styleListTasks.styleTask}
-        onPress={() => onHandleSelectedTask(item.id, 'detail')}
-      >
+        style={styles.styleTask}
+        onPress={() => onHandleSelectedTask(item.id, 'detail')}>
         <Task title={item.value} />
       </TouchableOpacity>
       <TouchableOpacity
-        style={styleListTasks.styleIcon}
-        onPress={() => onHandleSelectedTask(item.id, 'delete')}
-      >
-        <Icon name='trash' size={30} color='#FFFBDB' />
+        style={styles.styleIcon}
+        onPress={() => onHandleSelectedTask(item.id, 'delete')}>
+        <Icon name="trash" size={30} color="#FFFBDB" />
       </TouchableOpacity>
     </View>
   );
 
   return (
-    <View style={styleListTasks.containerListTasks}>
+    <View style={styles.containerListTasks}>
       <FlatList
         data={tasks}
         renderItem={renderTask}

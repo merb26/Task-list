@@ -1,13 +1,13 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
-export const styleAddTask = StyleSheet.create({
+export const styles = StyleSheet.create({
   containerAdd: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
 
-  txtInpAdd: {
+  txtInputAdd: {
     width: 300,
     borderLeftWidth: 5,
     borderColor: '#B9D2B1',

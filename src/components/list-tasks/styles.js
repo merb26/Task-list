@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
-export const styleListTasks = StyleSheet.create({
+export const styles = StyleSheet.create({
   containerListTasks: {
     marginVertical: 15,
   },
@@ -18,7 +18,7 @@ export const styleListTasks = StyleSheet.create({
   },
 
   styleIcon: {
-    width: '15%',
+    // width: '15%',
     backgroundColor: '#e63946',
     justifyContent: 'center',
     alignItems: 'center',
